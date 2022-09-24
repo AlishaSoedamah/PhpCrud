@@ -64,7 +64,7 @@
         const mins = document.getElementById("aantal").value;
         const naam = document.getElementById("naam").value;
 
-        if (min < 0) {
+        if (mins < 0) {
             alert("Je moet een geldig getal invoeren");
         }
         if (naam < 0 || naam > 255 ){
