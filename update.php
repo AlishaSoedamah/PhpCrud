@@ -19,11 +19,11 @@
             $id = isset($_POST['id']) ? $_POST['id'] : NULL;
             $naam = isset($_POST['naam']) ? $_POST['naam'] : '';
             $klas = isset($_POST['klas']) ? $_POST['klas'] : '';
-            $mins = isset($_POST['aantal']) ? $_POST['aantal'] : '';
+            $aantal = isset($_POST['aantal']) ? $_POST['aantal'] : '';
             $reden = isset($_POST['reden']) ? $_POST['reden'] : '';
             // Update the record
             $stmt = $pdo->prepare('UPDATE studenten SET id = ?, naam = ?, klas = ?, aantal = ?, reden = ? WHERE id = ?');
-            $stmt->execute([$id, $naam, $klas, $mins, $reden, $_GET['id']]);
+            $stmt->execute([$id, $naam, $klas, $aantal, $reden, $_GET['id']]);
             $msg = 'Updated Successfully!';
         }
         // Get the contact from the contacts table
@@ -54,8 +54,8 @@
         <input type="text" name="klas" value="<?= $student['klas'] ?>" id="klas">
         <label for="reden">Reden</label>
         <input type="text" name="reden" value="<?= $student['reden'] ?>" id="reden">
-        <label for="min">Min te laat</label>
-        <input type="number" name="min" value="<?= $student['aantal'] ?>" placeholder="Min te laat" id="min">
+        <label for="aantal">Min te laat</label>
+        <input type="number" name="aantal" value="<?= $student['aantal'] ?>" placeholder="Min te laat" id="aantal">
         <input class="add-student" type="submit" value="Update deze student">
     </form>
     <?php if ($msg) : ?>
