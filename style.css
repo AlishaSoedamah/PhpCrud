@@ -1,22 +1,17 @@
 body {
     box-sizing: border-box;
-    padding:0;
-    margin:0;
+    padding: 0;
+    margin: 0;
     font-family: arial, sans-serif;
     background-color: #11141B;
 }
 
-h1 {
-  color: #F0F0F0;
-}
-
-h2 {
-  color: #F0F0F0;
-}
-
+h1,
+h2,
 p {
   color: #F0F0F0;
 }
+
 
 table {
     border-collapse: collapse;

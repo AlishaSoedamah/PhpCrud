@@ -13,6 +13,7 @@
 include 'databaseConnect.php'; 
 $pdo = pdo_connect_mysql();
 $msg = '';
+
 // Check if POST data is not empty
 if (!empty($_POST)) {
     // Post data not empty insert a new record
@@ -59,15 +60,15 @@ $statement->execute([
 <h1>Create</h1>
     <form class="update" action="create.php" method="post">
         <label for="id">ID</label>
-        <input type="text" name="id" placeholder="26" value="auto" id="id">
+        <input type="text" name="id" value="auto" id="id">
         <label for="naam">Naam</label>
-        <input type="text" name="naam" placeholder="John Doe" id="naam">
+        <input type="text" name="naam" placeholder="Naam" id="naam">
         <label for="klas">Klas</label>
-        <input type="text" name="klas" placeholder="4c" id="klas">
+        <input type="text" name="klas" placeholder="Klas" id="klas">
         <label for="reden">Reden</label>
-        <input type="text" name="reden" placeholder="reden" id="reden">
+        <input type="text" name="reden" placeholder="Reden" id="reden">
         <label for="aantal">Min te laat</label>
-        <input type="number" name="aantal" placeholder="min laat" id="aantal">
+        <input type="number" name="aantal" placeholder="Min laat" id="aantal">
         <input type="submit" class="add-student" value="Zet student erbij"></input>
     </form>
     <?php if ($msg) : ?>
