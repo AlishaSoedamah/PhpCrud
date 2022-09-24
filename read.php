@@ -52,7 +52,7 @@ $num_students = $pdo->query('SELECT COUNT(*) FROM studenten')->fetchColumn();
                 <td><?= $student['id'] ?></td>
                 <td><?= $student['naam'] ?></td>
                 <td><?= $student['klas'] ?></td>
-                <td><?= $student['aantal min'] ?></td>
+                <td><?= $student['aantal'] ?></td>
                 <td><?= $student['reden'] ?></td>
                 <td><a href="delete.php?id=<?= $student['id'] ?>" class="delete">Verwijder</a></td>
                 <td><a href="update.php?id=<?= $student['id']?>" class="add-student">Updaten</a></td>

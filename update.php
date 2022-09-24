@@ -18,7 +18,7 @@ if (isset($_GET['id'])) {
         $id = isset($_POST['id']) ? $_POST['id'] : NULL;
         $naam = isset($_POST['naam']) ? $_POST['naam'] : '';
         $klas = isset($_POST['klas']) ? $_POST['klas'] : '';
-        $mins = isset($_POST['aantal min']) ? $_POST['aantal min'] : '';
+        $mins = isset($_POST['aantal']) ? $_POST['aantal'] : '';
         $reden = isset($_POST['reden']) ? $_POST['reden'] : '';
 
         // Update the record

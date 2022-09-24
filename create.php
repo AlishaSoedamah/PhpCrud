@@ -21,7 +21,7 @@ if (!empty($_POST)) {
     // Check if POST variable "name" exists, if not default the value to blank, basically the same for all variables
     $naam = isset($_POST['naam']) ? $_POST['naam'] : '';
     $klas = isset($_POST['klas']) ? $_POST['klas'] : '';
-    $mins = isset($_POST['aantal min']) ? $_POST['aantal min'] : '';
+    $mins = isset($_POST['aantal']) ? $_POST['aantal'] : '';
     $reden = isset($_POST['reden']) ? $_POST['reden'] : '';
 
     // Insert new record into the studenten table
@@ -66,8 +66,8 @@ $statement->execute([
         <input type="text" name="klas" placeholder="4c" id="klas">
         <label for="reden">Reden</label>
         <input type="text" name="reden" placeholder="reden" id="reden">
-        <label for="aantal min">Min te laat</label>
-        <input type="number" name="aantal min" placeholder="min laat" id="aantal min">
+        <label for="aantal">Min te laat</label>
+        <input type="number" name="aantal" placeholder="min laat" id="aantal">
         <input type="submit" class="add-student" value="Zet student erbij"></input>
     </form>
     <?php if ($msg) : ?>
