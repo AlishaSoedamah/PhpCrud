@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
 <?php include 'databaseConnect.php';
 
 // Connect to MySQL database
@@ -19,8 +30,6 @@ $studenten = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 $num_students = $pdo->query('SELECT COUNT(*) FROM studenten')->fetchColumn();
 ?>
-
-<link rel="stylesheet" href="style.css">
 
 <nav>
     <a href="read.php">Studenten</a>
@@ -45,10 +54,12 @@ $num_students = $pdo->query('SELECT COUNT(*) FROM studenten')->fetchColumn();
                 <td><?= $student['klas'] ?></td>
                 <td><?= $student['aantal min'] ?></td>
                 <td><?= $student['reden'] ?></td>
-                <td><a href="delete.php?id=<?= $student['id'] ?>&confirm=yes" class="delete">Verwijder</a></td>
+                <td><a href="delete.php?id=<?= $student['id'] ?>" class="delete">Verwijder</a></td>
                 <td><a href="update.php?id=<?= $student['id']?>" class="add-student">Updaten</a></td>
             </tr>
             <?php endforeach; ?>
             </table>
             <a href="create.php" class="add-student">Weer eentje te laat</a>
         </div>
+</body>
+</html>

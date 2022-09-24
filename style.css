@@ -69,13 +69,18 @@ table {
     margin: 0 auto;
     max-width: 60%;
   }
-  .create,
-  .update {
+
+  .flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
     flex-direction: column;
+
+  }
+  .update {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
   }
 
   .delete {
@@ -92,6 +97,10 @@ table {
 
   .delete:hover {
     background: darkred;
+  }
+
+  .warn {
+    padding: 10px 0;
   }
 
   .add-student {

@@ -1,5 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create</title>    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
- <link rel="stylesheet" href="style.css">
 <?php
 include 'databaseConnect.php'; 
 $pdo = pdo_connect_mysql();
@@ -19,7 +28,7 @@ if (!empty($_POST)) {
     $stmt = $pdo->prepare('INSERT INTO studenten VALUES (?, ?, ?, ?, ?)');
     $stmt->execute([$id, $naam, $klas, $mins, $reden]);
     // Output message
-    $msg = 'Created Successfully!';
+    $msg = 'Student successful gecreëerd!';
 }
 
 $dbhost = 'localhost';
@@ -38,9 +47,6 @@ $statement->execute([
     'age' => '18',
 ]);
 
-//  if ($aantalMin < 0) {
-//     return "Vul een geldige tijd in!";
-//  }
 
 ?>
 
@@ -49,9 +55,9 @@ $statement->execute([
     <a href="index.php">Home page</a>
  </nav>
 
-<div class="create">
+<div class="flex-center">
 <h1>Create</h1>
-    <form action="create.php" method="post">
+    <form class="update" action="create.php" method="post">
         <label for="id">ID</label>
         <input type="text" name="id" placeholder="26" value="auto" id="id">
         <label for="naam">Naam</label>
@@ -67,4 +73,10 @@ $statement->execute([
     <?php if ($msg) : ?>
         <p><?= $msg ?></p>
     <?php endif; ?>
+    <script>
+    const mins = Document.getElementById("")
+    </script>
 </div>
+
+</body>
+</html>
