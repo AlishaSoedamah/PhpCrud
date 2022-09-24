@@ -62,13 +62,13 @@ $statement->execute([
         <label for="id">ID</label>
         <input type="text" name="id" value="auto" id="id">
         <label for="naam">Naam</label>
-        <input type="text" name="naam" placeholder="Naam" id="naam">
+        <input type="text" name="naam" placeholder="Naam" min="1"  max="255" id="naam">
         <label for="klas">Klas</label>
         <input type="text" name="klas" placeholder="Klas" id="klas">
         <label for="reden">Reden</label>
         <input type="text" name="reden" placeholder="Reden" id="reden">
         <label for="aantal">Min te laat</label>
-        <input type="number" name="aantal" placeholder="Min laat" id="aantal">
+        <input type="number" name="aantal" min="1" placeholder="Min laat" id="aantal">
         <input type="submit" class="add-student" value="Zet student erbij"></input>
     </form>
     <?php if ($msg) : ?>
@@ -78,6 +78,18 @@ $statement->execute([
     const mins = Document.getElementById("")
     </script>
 </div>
+<script>
+    // form validation
+        const mins = document.getElementById("aantal").value;
+        const naam = document.getElementById("naam").value;
 
+        if (min < 0) {
+            alert("Je moet een geldig getal invoeren");
+        }
+        if (naam < 0 || naam > 255 ){
+            alert("Voer een geldige naam in");
+        }
+
+</script>
 </body>
 </html>
